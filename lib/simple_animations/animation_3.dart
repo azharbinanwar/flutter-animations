@@ -33,7 +33,7 @@ class _Animation3State extends State<Animation3> {
         ),
         FloatingActionButton(
           onPressed: () => setState(() => _isExpanded = !_isExpanded),
-          child: Icon(_isExpanded ? Icons.close : Icons.add),
+          child: AnimatedRotation(turns: _isExpanded ? 0.25 : 0.125, duration: const Duration(milliseconds: 200), child: const Icon(Icons.close)),
         )
       ],
     );

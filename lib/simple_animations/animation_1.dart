@@ -8,7 +8,7 @@ class Animation1 extends StatefulWidget {
 }
 
 class _Animation1State extends State<Animation1> {
-  bool _isExpanded2 = false;
+  bool _isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class _Animation1State extends State<Animation1> {
           switchOutCurve: Curves.easeIn,
           reverseDuration: const Duration(milliseconds: 600),
           transitionBuilder: (c, ani) => ScaleTransition(alignment: Alignment.bottomCenter, scale: ani, child: c),
-          child: !_isExpanded2
+          child: !_isExpanded
               ? const SizedBox.shrink()
               : Column(
                   children: [
@@ -35,8 +35,8 @@ class _Animation1State extends State<Animation1> {
                 ),
         ),
         FloatingActionButton(
-          onPressed: () => setState(() => _isExpanded2 = !_isExpanded2),
-          child: Icon(_isExpanded2 ? Icons.close : Icons.add),
+          onPressed: () => setState(() => _isExpanded = !_isExpanded),
+          child: AnimatedRotation(turns: _isExpanded ? 0.25 : 0.125, duration: const Duration(milliseconds: 200), child: const Icon(Icons.close)),
         )
       ],
     );

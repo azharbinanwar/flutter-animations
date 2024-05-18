@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/animation/animation_1.dart';
 import 'package:flutter_animation/animation/animation_2.dart';
-import 'package:flutter_animation/animation/animation_3.dart';
+import 'package:flutter_animation/animation/animation_4.dart';
+
+import 'animation_3.dart';
 
 class SimpleAnimationPage extends StatefulWidget {
   SimpleAnimationPage({super.key});
@@ -17,11 +19,7 @@ class _SimpleAnimationPageState extends State<SimpleAnimationPage> {
       appBar: AppBar(title: const Text('Flutter App')),
       body: Stack(
         children: [
-          // const Positioned(
-          //   bottom: 16.0,
-          //   right: 16.0,
-          //   child: Animation4(),
-          // ),
+          const Animation4(),
           const Animation2(),
           const Positioned(
             left: 0.0,
@@ -34,15 +32,14 @@ class _SimpleAnimationPageState extends State<SimpleAnimationPage> {
             left: 16.0,
             child: Animation3(),
           ),
-
-          // Align(
-          //   alignment: Alignment.topCenter,
-          //   child: Text(
-          //     'Simple animations',
-          //     textAlign: TextAlign.center,
-          //     style: Theme.of(context).textTheme.headlineLarge,
-          //   ),
-          // ),
+          Align(
+            alignment: Alignment.center,
+            child: Text(
+              'Simple animations',
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.headlineLarge,
+            ),
+          ),
         ],
       ),
     );

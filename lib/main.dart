@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animation/animation/simple_animation_page.dart';
+import 'package:flutter_animation/simple_animations/simple_animation_page.dart';
 
 void main() {
   runApp(const MyApp());
