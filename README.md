@@ -4,4 +4,6 @@ Flutter animations
 
 ## Simple animations using default widgets
 
-[Watch the video](https://youtube.com/shorts/ayn5Ggu-BiA)
+
+https://github.com/azharbinanwar/flutter-animations/assets/35997819/10688fdb-46e7-4552-9f02-9fc543a37425
+
